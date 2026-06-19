@@ -11,7 +11,7 @@ const OnSaleProducts = () => {
   const { addToCart } = useCart();
 
   useEffect(() => {
-    fetch("https://backend-book-store-alpha.vercel.app/api/books/getAllBooks", {
+    fetch("http://localhost:5000/api/books/getAllBooks", {
       credentials: "include",
     })
       .then((res) => res.json())

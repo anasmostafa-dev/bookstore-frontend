@@ -12,7 +12,7 @@ const UpdateBook = () => {
 
   useEffect(() => {
     try {
-      fetch(`https://backend-book-store-alpha.vercel.app/api/books/getAllBooks/${id}`)
+      fetch(`http://localhost:5000/api/books/getAllBooks/${id}`)
         .then((res) => res.json())
         .then((data) => {
           const fetchedBook = data?.message;
@@ -38,7 +38,7 @@ const UpdateBook = () => {
         isOnSale: Boolean(book.isOnSale),
       };
       const res = await fetch(
-        `https://backend-book-store-alpha.vercel.app/api/books/updateBook/${id}`,
+        `http://localhost:5000/api/books/updateBook/${id}`,
         {
           method: "PUT",
           headers: {
@@ -89,7 +89,7 @@ const UpdateBook = () => {
     if (result.isConfirmed) {
       try {
         const res = await fetch(
-          `https://backend-book-store-alpha.vercel.app/api/books/deleteBook/${id}`,
+          `http://localhost:5000/api/books/deleteBook/${id}`,
           {
             method: "DELETE",
           },
