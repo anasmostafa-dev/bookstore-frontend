@@ -11,7 +11,7 @@ const FeaturedProduct = () => {
   const { addToCart } = useCart();
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/books/getAllBooks", {
+    fetch("https://bookstore-backend-blond.vercel.app/api/books/getAllBooks", {
       credentials: "include",
     })
       .then((res) => res.json())

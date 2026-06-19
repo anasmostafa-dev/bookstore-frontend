@@ -15,7 +15,7 @@ const BookDetails = () => {
 
   useEffect(() => {
     try {
-      fetch(`http://localhost:5000/api/books/getAllBooks/${id}`)
+      fetch(`https://bookstore-backend-blond.vercel.app/api/books/getAllBooks/${id}`)
         .then((res) => res.json())
         .then((data) => {
           setBook(data.message);

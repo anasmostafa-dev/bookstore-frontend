@@ -21,7 +21,7 @@ export const AuthProvider = ({ children }) => {
   const checkAuthStatus = async () => {
     try {
       //logged or not//
-      const response = await fetch("http://localhost:5000/api/users/verify", {
+      const response = await fetch("https://bookstore-backend-blond.vercel.app/api/users/verify", {
         method: "GET",
         credentials: "include",
       });
@@ -52,7 +52,7 @@ export const AuthProvider = ({ children }) => {
   //login
   const login = async (credentials) => {
     try {
-      const response = await fetch("http://localhost:5000/api/login", {
+      const response = await fetch("https://bookstore-backend-blond.vercel.app/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -76,7 +76,7 @@ export const AuthProvider = ({ children }) => {
   //register
   const register = async (userData) => {
     try {
-      const response = await fetch("http://localhost:5000/api/register", {
+      const response = await fetch("https://bookstore-backend-blond.vercel.app/api/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -101,7 +101,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/users/logout", {
+      const response = await fetch("https://bookstore-backend-blond.vercel.app/api/users/logout", {
         method: "POST",
         credentials: "include",
       });

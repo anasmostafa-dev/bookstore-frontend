@@ -20,7 +20,7 @@ const Checkout = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/orders/create", {
+      const res = await fetch("https://bookstore-backend-blond.vercel.app/orders/create", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",

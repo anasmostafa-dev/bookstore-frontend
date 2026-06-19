@@ -50,7 +50,7 @@ const AddBook = () => {
     const loadCats = async () => {
       try {
         const res = await fetch(
-          "http://localhost:5000/api/categories/getCategories",
+          "https://bookstore-backend-blond.vercel.app/api/categories/getCategories",
           { method: "GET", credentials: "include" },
         );
         if (res.status === 401 || res.status === 403) {
@@ -121,7 +121,7 @@ const AddBook = () => {
 
     try {
       const res = await fetch(
-        "http://localhost:5000/admin/add-book",
+        "https://bookstore-backend-blond.vercel.app/admin/add-book",
         {
           method: "POST",
           body: fd,

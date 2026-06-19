@@ -8,7 +8,7 @@ const MyOrders = () => {
 
   useEffect(() => {
     
-    fetch("http://localhost:5000/orders/my-orders", { credentials: "include" })
+    fetch("https://bookstore-backend-blond.vercel.app/orders/my-orders", { credentials: "include" })
       .then((res) => res.json())
       .then((data) => {
         setOrders(data.orders);

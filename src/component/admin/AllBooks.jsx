@@ -12,7 +12,7 @@ const AllBooks = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const res = await fetch("http://localhost:5000/admin/getAllBooks", {
+        const res = await fetch("https://bookstore-backend-blond.vercel.app/admin/getAllBooks", {
           method: "GET",
           credentials: "include",
           headers: {

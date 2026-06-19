@@ -12,7 +12,7 @@ export function CartProvider({ children }) {
     if (!isAuthenticated) return;
     const fetchCart = async () => {
       try {
-        const res = await fetch("http://localhost:5000/carts", {
+        const res = await fetch("https://bookstore-backend-blond.vercel.app/carts", {
           credentials: "include",
         });
         const data = await res.json();
@@ -28,7 +28,7 @@ export function CartProvider({ children }) {
 
   const addToCart = async (bookId) => {
     try {
-      const res = await fetch("http://localhost:5000/carts/add", {
+      const res = await fetch("https://bookstore-backend-blond.vercel.app/carts/add", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
@@ -50,7 +50,7 @@ export function CartProvider({ children }) {
 
   const updateCart = async ({ bookId, quantity }) => {
     try {
-      const res = await fetch("http://localhost:5000/carts/update", {
+      const res = await fetch("https://bookstore-backend-blond.vercel.app/carts/update", {
         method: "PUT",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
@@ -68,7 +68,7 @@ export function CartProvider({ children }) {
 
   const removeFromCart = async (bookId) => {
     try {
-      const res = await fetch(`http://localhost:5000/carts/remove/${bookId}`, {
+      const res = await fetch(`https://bookstore-backend-blond.vercel.app/carts/remove/${bookId}`, {
         method: "DELETE",
         credentials: "include",
       });
@@ -85,7 +85,7 @@ export function CartProvider({ children }) {
 
   const clearCart = async () => {
     try {
-      await fetch("http://localhost:5000/carts/clear", {
+      await fetch("https://bookstore-backend-blond.vercel.app/carts/clear", {
         method: "DELETE",
         credentials: "include",
       });
